@@ -1,4 +1,9 @@
 {
-  "presets": ["kensho", "react"],
-  "plugins": ["react-hot-loader/babel"]
+  "presets": [
+    "kensho",
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    "react-hot-loader/babel"
+  ]
 }

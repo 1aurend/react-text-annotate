@@ -8,7 +8,7 @@ interface TokenProps {
   content: string
 }
 
-const Token: React.SFC<TokenProps> = props => {
+const Token: React.FunctionComponent<TokenProps> = props => {
   return <span data-i={props.i}>{props.content} </span>
 }
 

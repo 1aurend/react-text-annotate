@@ -35,6 +35,8 @@ export const splitTokensWithOffsets = (text, offsets: {start: number; end: numbe
   let lastEnd = 0
   const splits = []
 
+  console.log(JSON.stringify(offsets, null, 2))
+
   for (let offset of sortBy(offsets, o => o.start)) {
     const {start, end} = offset
     if (lastEnd < start) {
@@ -49,6 +51,7 @@ export const splitTokensWithOffsets = (text, offsets: {start: number; end: numbe
       ...offset,
       mark: true,
       content: text.slice(start, end).join(' '),
+      links: [start]
     })
     lastEnd = end
   }
@@ -60,6 +63,7 @@ export const splitTokensWithOffsets = (text, offsets: {start: number; end: numbe
     })
   }
 
+  console.log(JSON.stringify(splits, null, 2))
   return splits
 }
 

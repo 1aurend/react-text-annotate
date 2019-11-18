@@ -10,7 +10,7 @@ export interface MarkProps {
   onClick: (any) => any
 }
 
-const Mark: React.SFC<MarkProps> = props => (
+const Mark: React.FunctionComponent<MarkProps> = props => (
   <mark
     style={{backgroundColor: props.color || '#84d2ff', padding: '0 4px'}}
     data-start={props.start}
